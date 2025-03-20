@@ -14,7 +14,11 @@ class TestesDesconto {
 	
 	@Test
 	void testeCalcularPrecoComDesconto100() {
-		//Fazer essa logica
+		Desconto desc = new Desconto();
+	
+		assertThrows(ArithmeticException.class, () -> {
+			desc.calcularPrecoComDesconto(10, 100);
+		}, "Desconto não pode ser 100%");
 	}
 
 }
